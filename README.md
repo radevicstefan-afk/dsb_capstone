@@ -276,11 +276,6 @@ Every step in the notebook follows the same pattern: first I explain **what** I 
 - **Comparison of the two review tools:** I compare the simple and the smarter sentiment tool on a small sample, in order
   to see how much the smarter tool adds.
 
-### Earlier work I keep as a reference
-
-- I clustered the Kaggle data (K-Means with k = 3, hierarchical clustering and DBSCAN) and found three profiles: regular
-  books (~52%), cheap Kindle Unlimited books (~27%) and books with long titles (~21%), with a silhouette score of about 0.3.
-- I built a random forest model for the bestseller label, which reached a ROC-AUC of about 0.83.
 
 ---
 
