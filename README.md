@@ -189,23 +189,10 @@ These files do **not** contain the niche, author fame or success yet: I create t
 | **Sentiment** | A 0/1 column for each review: 1 = positive, 0 = negative, predicted from the review **text** |
 | **Bestseller label** | I use it only as an extra check of my definition of success, not as the target |
 
-## 6. Guardrails
-
-These are the rules I follow so that my results can be trusted:
-
-- **No data leakage.** I take early signals only from the first 90 days, I measure success over 12 months, and I count
-  author fame only from ratings received before the book appeared. This way the model never "sees the future".
-- **Same source, separate windows.** Early signals and success both come from ratings, so I keep the two time windows
-  strictly apart.
-- **Within-niche comparison.** I compare ratings and reviews within a niche (using percentiles), because niches differ in
-  size and in how often people write reviews.
-- **Prediction, not causation.** My model can show that early signals *predict* success, but not that they *cause* it.
-- **Reliability per niche.** I report the model's quality (ROC-AUC, PR-AUC and calibration) separately for each niche,
-  together with how much the early signals add compared with the niche's base rate.
 
 ---
 
-## 7. Suggestions from Mentors and How I Applied Them
+## 6. Suggestions from Mentors and How I Applied Them
 
 Because my datasets are very large and because I need to understand what people write in their reviews, I was 
 suggested a few tools that could help.
@@ -234,7 +221,7 @@ What I use, where and why:
 
 ---
 
-## 8. Plan of Work
+## 7. Plan of Work
 
 ### Notebook 1: EDA and feature engineering (`notebooks/01_EDA_feature_engineering.ipynb`)
 
@@ -279,7 +266,7 @@ Every step in the notebook follows the same pattern: first I explain **what** I 
 
 ---
 
-## 9. Data Sources and References
+## 8. Data Sources and References
 
 - Hou, Y., Li, J., He, Z., Yan, A., Chen, X., & McAuley, J. (2024). *Bridging Language and Items for Retrieval and
   Recommendation.* arXiv:2403.03952. Dataset: [Amazon Reviews 2023](https://amazon-reviews-2023.github.io/).
